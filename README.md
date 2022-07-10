@@ -48,11 +48,14 @@
 
 # Steps before creating a new Angular app
 
+- **If you are like me, A picky backend developer with dogmatic fervent belief that what you know is 100% transmutable to frontend I should say I am so sorry but unfortunately we have to adapt ourselves with a new realities\*. So please use a broom and clean sweep your mind. Be like a junior who accepts anything**
 - Specify and identify your
   - [components](#what-are-components)
   - [modules]()
   - [models]()
 - App Component should soly contains overall app
+
+\* Reality is not a solid singular thing, They are meandering and flowing like water
 
 # What are Components?
 
