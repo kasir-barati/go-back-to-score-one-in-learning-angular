@@ -43,6 +43,14 @@
     - `ng add ngx-bootstrap`
   - IDK which one is better
 
+# Steps before creating a new Angular app
+
+- Specify and identify your
+  - [components](#what-are-components)
+  - [modules]()
+  - [models]()
+- App Component should soly contains overall app
+
 # What are Components?
 
 - `AppComponent`:
