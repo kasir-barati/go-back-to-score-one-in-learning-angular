@@ -42,3 +42,47 @@
   - Use something re-written
     - `ng add ngx-bootstrap`
   - IDK which one is better
+
+# What are Components?
+
+- `AppComponent`:
+  - Root component
+  - A wrapper which holds other components
+- Why components
+  - Reuse your code
+  - Keep business logics in different places.
+- Component parts:
+  - HTML
+  - CSS
+  - TS
+  - And test file
+- Create new component:
+  - `ng g c component-name`
+  - A class annotated with `@Component`
+    - `selector`
+      - Should be unique.
+      - It is a CSS selector
+        - Id selector won't work
+        - pseudo classes won't work too
+  - A component is directive.
+- Data binding
+  - Passing data to the template
+  - Types
+    - String interpolation:
+      - `{{ data }}`
+      - Any expression that can be at the resolve to string
+      - No multiline
+      - You can imitate the property binding
+        - `attribute="{{property}}"`
+    - Property binding:
+      - `[property]="data"`
+      - Dynamically bind a property to an attribute
+      - Do not use property binding and string interpolation in conjunction.
+    - Event binding:
+      - `(event)="expression"`
+      - `$event` is the data emitted by that event.
+        - Do type casting to be more type safe
+          - `(<HTMLInputElement>event.target).value`
+      - e.x. `(event)="methodName()"`
+    - Two way data binding:
+      - `[(ngModel)]="data"`
