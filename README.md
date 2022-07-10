@@ -19,6 +19,12 @@
   - `pnpm start`
     - Or use `ng serve`
     - Start your Angular app
+      - ### **How Angular bootstrap our app**:
+        1. Bundle codes into multiple JS files
+        2. Add those scripts link in the `index.html` automatically while stating app
+        3. Now `main.ts` codes will be executed
+        4. From `main.ts` we go into `app.module.ts`
+        5. From `app.module.ts` rest of the components would be read and handled
 - App Module
   - App Component
     - template/html
