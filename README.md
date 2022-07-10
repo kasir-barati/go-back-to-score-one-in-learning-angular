@@ -86,3 +86,27 @@
       - e.x. `(event)="methodName()"`
     - Two way data binding:
       - `[(ngModel)]="data"`
+
+# Directives
+
+- Instructions in DOM
+- Typically use attribute selector
+- `@Directive`
+- Built-in directives
+  - Structural directive
+    - `[ngIf]`
+      - Syntax sugar: `*ngIf`
+      - Use local reference for else:
+        ```html
+        <div *ngIf="expression; else localReferenceToAnotherTag">
+          If
+        </div>
+        <ng-template #localReferenceToAnotherTag>Else</ng-template>
+        ```
+    - `[ngClass]`
+      - Add or remove class dynamically
+      - An object where the key is the class name and the value is the condition that specifies when the class should be added to the element.
+      - e.x. `[ngClass]="{ 'class-name': expression }"`
+    - `[ngFor]`
+      - Loop
+      - e.x. `<h3 *ngFor="let t of titles; let i = index">{{ i }}: {{ t }}</h3>`
