@@ -14,3 +14,13 @@ https://dms.licdn.com/playlist/C4E05AQFTaTv7TR07Og/mp4-720p-30fp-crf28/0/1656947
 - [Clearfix helper](https://getbootstrap.com/docs/5.2/helpers/clearfix/)
   - Quickly and easily clear floated content within a container by adding a clearfix utility.
   - Add `.clearfix` to the parent element.
+- [Grid system](https://getbootstrap.com/docs/5.2/layout/grid/)
+  - Mobile-first flexbox grid system
+  - Use a series of containers, rows, and columns to layout and align content.
+  - It’s built with flexbox.
+  - Use `.container` for a responsive pixel width
+  - Use `.container-fluid` for `width: 100%` across all viewports and devices
+  - `.row`
+    - Rows are wrappers for columns.
+    - Each column has horizontal padding (called a gutter) for controlling the space between them.
+    - `.col-`, `.col-sm-`, `.col-md-`, `.col-lg-`, `.col-xl-`, `.col-xxl-`
