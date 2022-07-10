@@ -36,11 +36,14 @@
   - Use native bootstrap
     - `pnpm add bootstrap`
     - `ng add bootstrap`
+      - **This command in my case did not pan out**
     - `angular.json`
-      - append to `architect -> build -> styles`
+      - append to `architect -> build -> options -> styles`
         - `node_modules/bootstrap/dist/css/bootstrap.min.css`
   - Use something re-written
     - `ng add ngx-bootstrap`
+      - [In my case I face a weird behavior](https://github.com/valor-software/ngx-bootstrap/issues/6481). So I went with alternative way: `pnpm add ngx-bootstrap`
+      - We still need to install, or add bootstrap css CDN manually.
   - IDK which one is better
 
 # Steps before creating a new Angular app
