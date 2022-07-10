@@ -1,0 +1,21 @@
+# Used Bootstrap classes
+
+- [Official doc for Navbar](https://getbootstrap.com/docs/5.2/components/navbar/)
+- Must be wrapped by `.navbar .navbar-expand{-sm|-md|-lg|-xl|-xxl}`.
+  - `navbar-expand-*` for responsive collapsing and color scheme classes
+- Navbars and their contents are fluid by default.
+- Responsive by default
+- Ensure accessibility:
+  - :thumbsup:By using a `<nav>` element
+  - :thumbsdown:By using a `<div>` and `role="navigation"` to every navbar.
+- Use `aria-current="page"` for the current page
+- Use `aria-current="true"` for the current item in a set.
+- Use `.navbar-brand` for your company, product, or project name.
+- Use `.navbar-nav` for a full-height and lightweight navigation
+- Use `.navbar-toggler` for use with our collapse plugin and other navigation toggling behaviors.
+- Use `.navbar-text` for adding vertically centered strings of text.
+- Use `.collapse.navbar-collapse` for grouping and hiding navbar contents by a parent breakpoint.
+- Use `.navbar-scroll` to set a `max-height` and scroll expanded navbar content.
+- Use spacing classes for extra spacing
+  - e.x. `me-auto, mb-2, mb-lg-0, me-2`
+  - In this example `me-auto` causes **Manage** dock to the right side
