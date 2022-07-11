@@ -1,10 +1,17 @@
-<app-header></app-header>
+<app-header
+    (clickOddEvenNumber)="onClickOddEvenNumber()"
+    (clickRecipes)="onClickRecipes()"
+    (clickShoppingList)="onClickShoppingList()"
+></app-header>
 
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <app-recipes></app-recipes>
-            <app-shopping-list></app-shopping-list>
+            <app-recipes *ngIf="showRecipes"></app-recipes>
+            <app-shopping-list *ngIf="showShoppingList">
+            </app-shopping-list>
+            <app-odd-even-numbers *ngIf="showOddEvenNumbers">
+            </app-odd-even-numbers>
         </div>
     </div>
 </div>
