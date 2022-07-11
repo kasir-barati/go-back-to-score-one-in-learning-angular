@@ -206,3 +206,13 @@
   - Use `@HostBinding` decorator to change element properties.
   - A good example written by me in [Stackoverflow](https://stackoverflow.com/a/72940921/8784518)
   - Use `@Input` decorator to pass value to the directive
+
+# Service And DI
+
+- Why we wanna use service?
+  - DRY
+  - Common data access layer
+- Use `@Injectable` decorator to mark a class as a service
+- Create new service via command line:
+  - General services: `ng g s shared/services/[name]`
+  - Component/module specific services: `ng g s [component/module]/services/[name]`

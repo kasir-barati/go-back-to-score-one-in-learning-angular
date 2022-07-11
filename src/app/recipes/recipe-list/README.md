@@ -22,3 +22,7 @@
     - Rows are wrappers for columns.
     - Each column has horizontal padding (called a gutter) for controlling the space between them.
     - `.col-`, `.col-sm-`, `.col-md-`, `.col-lg-`, `.col-xl-`, `.col-xxl-`
+
+# Service
+
+- Do initializations in the `ngOnInit` to be safe and under the benevolent care of Angular
