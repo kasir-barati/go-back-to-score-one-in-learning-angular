@@ -1,3 +1,18 @@
+# Why Angular
+
+- A unified method for developing applications and sharing code
+- The capacity to build applications for any deployment target:
+  - Web
+  - Mobile web
+  - Native mobile
+  - Native desktop
+- Angular uses Web Workers and server-side rendering.
+- An edge over scalability by using libraries like RxJS, Immutable.js or another push-model for building data models
+  - To meet huge data requirements.
+- A great developer tooling to simplifies the process of rapidly developing features using simple, and declarative templates.
+- **It powers applications developed by Google and utilized by millions of people worldwide**
+  - TBH and direct I do not think Google CEO and other administrators in Google let something drag on them. But at the end of the day we are human and everything is possible and most likely most of the time we are stupid.
+
 # What is Angular
 
 - A JS framework to Create reactive SPA
@@ -33,18 +48,39 @@
     - typescript
   - `imports` should contains which part of the Angular you need.
 - Configure bootstrap for styling
+  - :warning:**While initializing your Angular app selects CSS if you wanna use css version of Bootstrap.**:warning:
+    ```cmd
+    Which stylesheet format would you like to use? (Use arrow keys)> CSS
+    SCSS   [ https://sass-lang.com/documentation/syntax #scss               ]
+    Sass   [ https://sass-lang.com/documentation/syntax#the-indented-syntax ]
+    Less   [ http://lesscss.org                                             ]
+    Stylus [ http://stylus-lang.com                                         ]
+    ```
   - Use native bootstrap
     - `pnpm add bootstrap`
     - `ng add bootstrap`
       - **This command in my case did not pan out**
     - `angular.json`
-      - append to `architect -> build -> options -> styles`
+      - Append to `projects->project-name->architect->build->options->styles`
         - `node_modules/bootstrap/dist/css/bootstrap.min.css`
+          ```json
+          "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+          ]
+          ```
+      - For JS part we will use `ngx-bootstrap`
+        - Why?
+          - Because As we all know Bootstrap needs jQuery and popper.js to work.
+          - It is better to avoid using libraries that make direct manipulation to the DOM (like jQuery).
+          - We just wanted to allow Angular deal with DOM
+          - `ngx-bootstrap` provides each Bootstrap component in each own module so you only import the components you need. As a result, your app will be smaller since it bundles only the components you are actually using.
+          - [ref](https://www.techiediaries.com/angular-bootstrap/)
   - Use something re-written
     - `ng add ngx-bootstrap`
       - [In my case I face a weird behavior](https://github.com/valor-software/ngx-bootstrap/issues/6481). So I went with alternative way: `pnpm add ngx-bootstrap`
+        - IDK which one is better
       - We still need to install, or add bootstrap css CDN manually.
-  - IDK which one is better
 
 # Steps before creating a new Angular app
 

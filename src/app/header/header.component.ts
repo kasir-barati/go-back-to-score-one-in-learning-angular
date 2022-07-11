@@ -4,11 +4,23 @@ import {
     OnInit,
     Output,
 } from '@angular/core';
+import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
+
+const bsDropdownConfig: Partial<BsDropdownConfig> = {
+    autoClose: true,
+    isAnimated: true,
+};
 
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.css'],
+    providers: [
+        {
+            provide: BsDropdownConfig,
+            useValue: bsDropdownConfig,
+        },
+    ],
 })
 export class HeaderComponent implements OnInit {
     @Output()

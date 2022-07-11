@@ -10,16 +10,30 @@
 </div>
 <div class="row">
     <div class="col-12">
-        <div class="btn-group">
-            <button class="btn btn-primary dropdown-toggle">
+        <div class="btn-group" dropdown>
+            <button
+                class="btn btn-primary dropdown-toggle"
+                type="button"
+                dropdownToggle
+            >
                 Manage recipe
                 <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="#">Add ingredients to shopping list</a>
-                    <a href="#">Edit recipe</a>
-                    <a href="#">Delete recipe</a>
+            <ul class="dropdown-menu" role="menu" *dropdownMenu>
+                <li role="menuitem">
+                    <a class="dropdown-item" href="#">
+                        Add ingredients to shopping list
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a class="dropdown-item" href="#">
+                        Edit recipe
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a class="dropdown-item" href="#">
+                        Delete recipe
+                    </a>
                 </li>
             </ul>
         </div>
