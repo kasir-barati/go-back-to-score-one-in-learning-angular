@@ -1,5 +1,3 @@
-https://dms.licdn.com/playlist/C4E05AQFTaTv7TR07Og/mp4-720p-30fp-crf28/0/1656947555535?e=1658077200&v=beta&t=3LtL8HLlGk72Ker-05nEFeG_Cpa82vdKgJTPWJFvxLs
-
 # Bootstrap classes
 
 - [Button component](https://getbootstrap.com/docs/5.2/components/buttons/)

@@ -100,6 +100,14 @@
       - e.x. `(event)="methodName()"`
     - Two way data binding:
       - `[(ngModel)]="data"`
+    - Data binding for our custom components
+      - Mark those properties that you wanna to be accessible outside of the component as accessible via annotating them with `@Input()` decorator
+        - `<app-component-selector [childPropertyName]="data"></app-component-selector>`
+        - **Pass data from parent to the child**
+      - Use `@Output()` decorator to return data from child component to parent component.
+        - `<app-component-selector (childPropertyName)="methodDefinedInParent"></app-component-selector>`
+        - **Pass data/event from child to the parent**
+- Angular does emulates shadow DOM.
 
 # Directives
 
@@ -117,6 +125,15 @@
         </div>
         <ng-template #localReferenceToAnotherTag>Else</ng-template>
         ```
+        - It can be added to any HTML tag
+        - **You can use it soly in the template**
+          - `@ViewChild`
+            - We can access to the local reference within our component class with a property annotated with this decorator
+            - `@ViewChild() elementName: ElementRef`
+            - **Do not touch DOM directly using `@ViewChild()`**
+            - Instead of having two way data binding we can just use this feature to just get the data when we need to send it back to the parent component
+          - `@ContentChild`
+            - To access local references within component content
     - `[ngClass]`
       - Add or remove class dynamically
       - An object where the key is the class name and the value is the condition that specifies when the class should be added to the element.
@@ -124,3 +141,12 @@
     - `[ngFor]`
       - Loop
       - e.x. `<h3 *ngFor="let t of titles; let i = index">{{ i }}: {{ t }}</h3>`
+- `<ng-content></ng-content>`
+  - It is a hook
+  - Since Angular prevent passing HTML between components to avoid any XSS attack this hook makes our code a lot more easier to read and maintain.
+  - You can access the content between your component's call in the child component.
+    ```html
+    <app-child-component>
+      <div *ngIf="someCondition === true">some data</div>
+    </app-child-component>
+    ```
