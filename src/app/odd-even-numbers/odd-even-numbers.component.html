@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="col-12">
+        <p>
+            By clicking on the "start" you will see odd and even
+            numbers on your screen and by hitting "pause" you will
+            stop numbers. And by clicking on "clear screen" you can
+            clear your screen from the previous numbers and see new
+            numbers.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 mb-3 d-flex justify-content-between">
+        <button
+            (click)="onStart()"
+            class="btn btn-success w-25 fw-bold"
+            type="button"
+        >
+            start
+        </button>
+        <button
+            (click)="onStop()"
+            class="btn btn-warning w-25 fw-bold"
+            type="button"
+        >
+            stop
+        </button>
+        <button
+            (click)="onClearScreen()"
+            class="btn btn-danger w-25 fw-bold"
+            type="button"
+        >
+            clear screen
+        </button>
+    </div>
+    <div class="col-12">
+        <table
+            class="table table-striped table-dark table-hover overflow-hidden rounded"
+        >
+            <thead>
+                <tr>
+                    <th>Even</th>
+                    <th>Odd</th>
+                </tr>
+            </thead>
+            <tbody
+                *ngIf="
+                    evenNumbers.length > 0 || oddNumbers.length > 0
+                "
+            >
+                <tr
+                    *ngFor="
+                        let evenNumber of evenNumbers;
+                        let index = index
+                    "
+                >
+                    <td>
+                        <app-even
+                            [evenNumber]="evenNumber"
+                        ></app-even>
+                    </td>
+                    <td>
+                        <app-odd
+                            *ngIf="
+                                (oddNumbers[index] | typeof) ===
+                                'number'
+                            "
+                            [oddNumber]="oddNumbers[index]"
+                        ></app-odd>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

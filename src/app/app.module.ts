@@ -9,6 +9,10 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipeItemComponent } from './recipes/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { OddEvenNumbersComponent } from './odd-even-numbers/odd-even-numbers.component';
+import { OddComponent } from './odd-even-numbers/odd/odd.component';
+import { EvenComponent } from './odd-even-numbers/even/even.component';
+import { TypeofPipe } from './shared/pipes/typeof.pipe';
 
 @NgModule({
     declarations: [
@@ -20,6 +24,10 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
         RecipeItemComponent,
         ShoppingListComponent,
         ShoppingEditComponent,
+        OddEvenNumbersComponent,
+        OddComponent,
+        EvenComponent,
+        TypeofPipe,
     ],
     imports: [BrowserModule],
     providers: [],
