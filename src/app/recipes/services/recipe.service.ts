@@ -15,7 +15,8 @@ export class RecipeService {
     selectedRecipe: EventEmitter<Recipe>;
     private _recipes: Recipe[];
     public get recipes(): Recipe[] {
-        return this._recipes;
+        // To prevent sending an reference to the array
+        return this._recipes.splice(0);
     }
     public set recipes(value: Recipe[]) {
         this._recipes = value;
@@ -23,9 +24,6 @@ export class RecipeService {
 
     constructor() {
         this.selectedRecipe = new EventEmitter<Recipe>();
-        this.selectedRecipe.subscribe(
-            (recipe) => (this.recipe = recipe),
-        );
         this.recipes = [
             {
                 description:

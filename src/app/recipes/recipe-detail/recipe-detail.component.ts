@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
 import { Recipe } from '../recipe.model';
-import { RecipeService } from '../services/recipe.service';
 
 const bsDropdownConfig: Partial<BsDropdownConfig> = {
     autoClose: true,
@@ -20,14 +19,10 @@ const bsDropdownConfig: Partial<BsDropdownConfig> = {
     ],
 })
 export class RecipeDetailComponent implements OnInit {
+    @Input()
     recipe: Recipe;
 
-    constructor(private recipeService: RecipeService) {}
+    constructor() {}
 
-    ngOnInit(): void {
-        this.recipe = this.recipeService.recipe;
-        this.recipeService.selectedRecipe.subscribe((recipe) => {
-            this.recipe = recipe;
-        });
-    }
+    ngOnInit(): void {}
 }
