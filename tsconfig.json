@@ -21,8 +21,8 @@
         "lib": ["es2020", "dom"],
         "strictPropertyInitialization": false,
         "paths": {
-            "@shared/*": ["src/shared/*"],
             "@app/*": ["src/app/*"],
+            "@shared/*": ["src/app/shared/*"],
             "@environments/*": ["src/environments/*"]
         }
     },

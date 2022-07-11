@@ -150,3 +150,23 @@
       <div *ngIf="someCondition === true">some data</div>
     </app-child-component>
     ```
+- Create a custom directive
+  - ` ng g d [name]`
+    - Creates a new, generic directive definition in the given or default project
+    - Depends on when it is a shared directive or restricted to a component I follow different approaches:
+      - `ng g d shared/directives/[name]`
+      - `ng g d [component/module]/directives/[name]`
+    - Edit the generated directive:
+      - Inject `ElementRef`, and `Renderer2`
+      - Implement `OnInit` to follow Angular lifecycle
+  - Use `@HostListener` decorator to react to events
+    ```ts
+    //...
+    @HostListener('mouseenter') mouseenter(eventData: Event) {
+      // Do something
+    }
+    //...
+    ```
+  - Use `@HostBinding` decorator to change element properties.
+  - A good example written by me in [Stackoverflow](https://stackoverflow.com/a/72940921/8784518)
+  - Use `@Input` decorator to pass value to the directive
