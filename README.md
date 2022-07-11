@@ -216,3 +216,8 @@
 - Create new service via command line:
   - General services: `ng g s shared/services/[name]`
   - Component/module specific services: `ng g s [component/module]/services/[name]`
+- ## **Do not overuse services**
+  - See these three commit sha for a neat, precise, exaggerated example:
+    1. [Dirty way with a tiny bug](https://github.com/kasir-barati/go-back-to-score-one-in-learning-angular/commit/8ab9bdda41fa62457c76ad5be4dbfb63146cea71)
+    2. [Fixed Dirty way](https://github.com/kasir-barati/go-back-to-score-one-in-learning-angular/commit/8febab85c1de79e7cc3a989fa94553a7b63fc25d)
+    3. [Fixed version](https://github.com/kasir-barati/go-back-to-score-one-in-learning-angular/commit/39c423f13a82b3c39882a9baa54da9ae8d3a2134)
