@@ -5,24 +5,10 @@
 </div>
 <div class="row">
     <div class="col-12">
-        <a
-            href="#"
-            class="list-group-item clearfix"
+        <app-recipe-item
             *ngFor="let recipe of recipes"
-        >
-            <div class="float-start">
-                <h4 class="">{{ recipe.name }}</h4>
-                <p class="">{{ recipe.description }}</p>
-            </div>
-            <div class="float-end">
-                <img
-                    [src]="recipe.imageUrl"
-                    [alt]="recipe.name"
-                    class="img-fluid"
-                    style="max-height: 50px"
-                />
-            </div>
-        </a>
-        <app-recipe-item></app-recipe-item>
+            [recipe]="recipe"
+            (clickRecipeItem)="onClickRecipeItem($event)"
+        ></app-recipe-item>
     </div>
 </div>
